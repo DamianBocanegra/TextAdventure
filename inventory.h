@@ -19,6 +19,10 @@ class inventory
    {
       return items[index];
    }
+   int length()
+   {
+       return items.size();
+   }
 
 
 };

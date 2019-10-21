@@ -2,29 +2,27 @@
 #define ROOM_H_INCLUDED
 
 
+
 class Room
 {
     private:
        string description;
-       item itemsInRoom[5];
+       int roomNumber;
        int northRoom;
        int southRoom;
        int eastRoom;
        int westRoom;
 
     public:
-        Room(string d, int n, int s, int e, int w)
+        Room(string d,int rN, int n, int s, int e, int w)
         {
             description = d;
+            roomNumber = rN;
             northRoom = n;
             southRoom = s;
             eastRoom = e;
             westRoom = w;
 
-        }
-        void addItems(item im, int index)
-        {
-            itemsInRoom[index] = im;
         }
         int getNorthRoom()
         {
@@ -41,6 +39,15 @@ class Room
         int getWestRoom()
         {
             return westRoom;
+        }
+        string getDescription()
+        {
+
+            return description;
+        }
+        int getRoomNumber()
+        {
+            return roomNumber;
         }
 
 

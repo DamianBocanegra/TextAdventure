@@ -4,15 +4,17 @@ using namespace std;
 
 class item
 {
-    private: 
+    private:
     string name;
     int quantity;
+    int location;
 
     public:
-    item(string n, int q)
+    item(string n, int q, int l)
     {
     	name = n;
     	quantity = q;
+    	location = l;
     }
 
     string getName()
@@ -32,5 +34,10 @@ class item
    void lowerQuantity()
    {
    	quantity -= 1;
+   }
+   int getLocation()
+   {
+
+       return location;
    }
 };
